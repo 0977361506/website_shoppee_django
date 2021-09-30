@@ -25,7 +25,7 @@ SECRET_KEY = 'zh^u&%x-0@ny@b7x7h$%agxggqwc5b_q%ygzabtzdax=fm$ebp'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','app-shoppee.herokuapp.com']
 
 
 # Application definition
