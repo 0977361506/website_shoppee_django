@@ -27,7 +27,8 @@ from polls.service.OrderService import *
 from polls.service.RateService import *
 
 from polls.service.BranchService import *
-
+from polls.processor.recommend.recommendService import *
+from polls.processor.recommend.recommendProcessor import * 
 # import thuw vieen de viet api
 from django.http import HttpResponse
 import json
@@ -36,7 +37,7 @@ import bcrypt
 from django.conf import settings
 from django.core.mail import send_mail
 # To get similar movies based on user rating
-
+import numpy as np
 # Controller
 
 def index(request):
@@ -47,6 +48,17 @@ def index(request):
     # thương hiệu nổi tiếng
     # sản phẩm đề xuất
     # Danh mục 
+    # matrix_recommend = makeRatingMatrix()
+
+
+    # matrix_recommend = np.array([[7, 6, 7, 4, 5, 4], 
+    #                        [6, 7, nan, 4, 3, 4],
+    #                        [nan, 3, 3, 1, 1, nan],
+    #                        [1, 2, 2, 3, 3, 4],
+    #                        [1, nan, 1, 2, 3, 3]])
+    # print(predict_top_k_items_of_user(2,2,matrix_recommend))
+
+    
     categories = getAllCategory()
     list_view_products = getListViewProduct()
     list_hot_branch = getListHotBranch()
