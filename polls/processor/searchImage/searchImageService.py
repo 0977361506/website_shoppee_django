@@ -19,9 +19,6 @@ from pathlib import Path
 from tensorflow.compat.v1 import ConfigProto
 from tensorflow.compat.v1 import InteractiveSession
 
-import cv2
-import glob
-
 
 
 
