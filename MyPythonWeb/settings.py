@@ -88,15 +88,15 @@ WSGI_APPLICATION = 'MyPythonWeb.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'db_shopee_django',
-        'USER': 'root',
-        'PASSWORD': '123456789',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
-    }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql', 
+#         'NAME': 'db_shopee_django',
+#         'USER': 'root',
+#         'PASSWORD': '123456789',
+#         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+#         'PORT': '3306',
+#     }
 
 
     # 'default': {
