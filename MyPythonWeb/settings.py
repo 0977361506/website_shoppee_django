@@ -88,15 +88,15 @@ WSGI_APPLICATION = 'MyPythonWeb.wsgi.application'
 #     }
 # }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql', 
-#         'NAME': 'db_shopee_django',
-#         'USER': 'root',
-#         'PASSWORD': '123456789',
-#         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-#         'PORT': '3306',
-#     }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql', 
+        'NAME': 'db_shopee_django',
+        'USER': 'root',
+        'PASSWORD': '123456789',
+        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
+    }
 
 
     # 'default': {
@@ -161,11 +161,18 @@ USE_TZ = True
 #  Add configuration for static files storage using whitenoise
 
 
+PROJECT_ROOT   =   os.path.join(os.path.abspath(__file__))
+STATIC_ROOT  =   os.path.join(PROJECT_ROOT, 'staticfiles')
+STATIC_URL = '/static/'
 
+# Extra lookup directories for collectstatic to find static files
+STATICFILES_DIRS = (
+    os.path.join(PROJECT_ROOT, 'static'),
+)
 
-STATICFILES_DIRS=[    # dưới local
-    os.path.join(BASE_DIR,'static')
-]
+# STATICFILES_DIRS=[    # dưới local
+#     os.path.join(BASE_DIR,'static')
+# ]
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'  # deloy lên heroku
 
 
