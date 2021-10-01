@@ -173,8 +173,8 @@ USE_TZ = True
 STATICFILES_DIRS=[    # dưới local
     os.path.join(BASE_DIR,'static')
 ]
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'  # deloy lên heroku
-
+# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'  # deloy lên heroku
+STATICFILES_STORAGE = ('whitenoise.storage.CompressedManifestStaticFilesStorage')
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
