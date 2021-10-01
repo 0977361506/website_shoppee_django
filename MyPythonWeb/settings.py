@@ -157,22 +157,20 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-# PROJECT_ROOT   =   os.path.join(os.path.abspath(__file__))  # trên heroku
-# STATIC_ROOT  =   os.path.join(PROJECT_ROOT, 'staticfiles')
-# STATIC_URL = '/static/'
 
-# # Extra lookup directories for collectstatic to find static files
-# STATICFILES_DIRS = (
-#     os.path.join(PROJECT_ROOT, 'static'),
-# )
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_DIR, '/Ki_2_Nam-4/Đồ án/Git_Đồ_án/website_shoppee_django/polls/static')
+STATIC_URL = '/polls/static/'
 
-# BASE_DIR = Path(__file__).resolve().parent.parent
 
-# STATIC_ROOT = BASE_DIR / 'staticfiles'
+#  Add configuration for static files storage using whitenoise
 
-STATICFILES_DIRS=[    # dưới local
-    os.path.join(BASE_DIR,'static')
-]
+
+
+
+# STATICFILES_DIRS=[    # dưới local
+#     os.path.join(BASE_DIR,'static')
+# ]
 # STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'  # deloy lên heroku
 
 
