@@ -158,20 +158,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(PROJECT_DIR, '/static')
-STATIC_URL = '/polls/static/'
-
-
 #  Add configuration for static files storage using whitenoise
 
 
 
 
-# STATICFILES_DIRS=[    # dưới local
-#     os.path.join(BASE_DIR,'static')
-# ]
-# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'  # deloy lên heroku
+STATICFILES_DIRS=[    # dưới local
+    os.path.join(BASE_DIR,'static')
+]
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'  # deloy lên heroku
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
