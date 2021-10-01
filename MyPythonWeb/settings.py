@@ -159,7 +159,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(PROJECT_DIR, '/Ki_2_Nam-4/Đồ án/Git_Đồ_án/website_shoppee_django/polls/static')
+STATIC_ROOT = os.path.join(PROJECT_DIR, '/static')
 STATIC_URL = '/polls/static/'
 
 
